@@ -1,0 +1,44 @@
+name: Testes Automatizados
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Instalar Playwright
+        run: |
+          playwright install --with-deps
+
+      - name: Subir aplicação
+        run: |
+          python server.py &
+          sleep 5
+
+      - name: Rodar testes
+        run: |
+          pytest -m smoke
+
+      - name: Upload relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-testes
+          path: report.html

@@ -1,0 +1,92 @@
+.home-dark {
+  background: #0b1220;
+  min-height: 100vh;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 🔥 alinhamento vertical */
+  padding: 15px 40px;
+  background: #0f172a;
+}
+
+/* MENU */
+.home-menu span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: 0.3s;
+}
+
+.home-menu span:hover {
+  color: white;
+}
+
+.home-menu .active {
+  color: white;
+  font-weight: bold;
+}
+
+/* CONTEÚDO */
+.home-content {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* TÍTULO */
+.home-content h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* SUBTÍTULO */
+.subtitle {
+  color: #9ca3af;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* GRID */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* CARDS */
+.home-card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #3b82f6;
+}
+
+/* ÍCONE */
+.home-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.home-card p {
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+/* LINK */
+.home-card span {
+  color: #3b82f6;
+  font-weight: bold;
+}

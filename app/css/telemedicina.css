@@ -1,0 +1,266 @@
+/* BASE */
+.home-dark {
+  background: #0b1220;
+  min-height: 100vh;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR (herdado da home se quiser mover pro global) */
+
+/* CONTEÚDO */
+.home-content {
+  padding: 60px 20px;
+  max-width: 1400px; /* 🔥 mais largo */
+  margin: 0 auto;
+}
+
+/* TÍTULO */
+.home-content h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* SUBTÍTULO */
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.tele-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.tele-card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.tele-card:hover {
+  border: 1px solid #3b82f6;
+}
+
+/* TITULO */
+.tele-card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tele-card p {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* INPUTS */
+.tele-card label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.tele-card input,
+.tele-card select {
+  width: 100%;
+  height: 45px; /* 🔥 força mesma altura */
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 15px;
+  box-sizing: border-box; /* 🔥 evita estourar */
+  font-size: 14px;
+}
+
+/* BOTÃO */
+.tele-card button {
+  width: 70%;
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tele-card button:hover {
+  background: #2563eb;
+}
+
+/* MENSAGEM */
+#msgTele {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .home-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.horarios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔥 ocupa mais espaço */
+  gap: 15px;
+  margin-top: 10px;
+}
+
+
+.label-horario {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 20px 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #cbd5f5;
+}
+
+.horarios button {
+  background: transparent;
+  border: 1px solid #334155;
+  color: white;
+  padding: 12px;
+  width: 100%; /* 🔥 ocupa toda a coluna */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.horarios button:hover {
+  border-color: #3b82f6;
+}
+
+.horarios button.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.horarios button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: #334155;
+  background: transparent;
+}
+
+.tele-lista {
+  margin-top: 40px;
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.tele-lista p{
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tele-lista h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#listaConsultas {
+  margin-top: 15px;
+  flex: 1; /* 🔥 ocupa espaço igual */
+}
+
+.consulta-item {
+  background: #1f2937;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.consulta-item div {
+  flex: 1; /* 🔥 ISSO EMPURRA O BOTÃO PRA DIREITA */
+}
+
+.consulta-item button {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: 1px solid #ef4444;
+  border-radius: 6px;
+
+  color: #ef4444;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.consulta-item button:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.6);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  flex: 1;
+  margin: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background: #ef4444;
+  color: white;
+}
+
+.modal-actions button:last-child {
+  background: #374151;
+  color: white;
+}

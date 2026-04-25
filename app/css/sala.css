@@ -1,0 +1,56 @@
+body {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+.home-content h1 {
+  text-align: center;
+}
+
+.sala-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.video-box {
+  width: 600px;
+  max-width: 90%;
+  height: 300px;
+  background: #111827;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 18px;
+}
+
+/* BOTÕES */
+.controles {
+  display: flex;
+  gap: 15px;
+}
+
+.controles button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controles button:hover {
+  background: #2563eb;
+}
+
+.controles .danger {
+  background: #ef4444;
+}
+
+.controles .danger:hover {
+  background: #dc2626;
+}

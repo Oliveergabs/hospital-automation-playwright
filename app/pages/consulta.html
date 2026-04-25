@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultas Presenciais</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/consulta.css?v=2">
+  <script src="../app.js" defer></script>
+</head>
+
+<body class="home-dark">
+
+  <!-- NAVBAR -->
+  <div class="home-navbar">
+  <div class="home-logo">🏥 Sistema Hospitalar</div>
+
+  <div class="home-menu">
+    <span onclick="irHome()">Início</span>
+    <span class="active" onclick="irConsulta()">Consulta</span>
+    <span onclick="irTelemedicina()">Telemedicina</span>
+    <span onclick="irPaciente()">Paciente</span>
+  </div>
+
+  <div class="home-right">
+    <span class="home-user">Olá, <strong id="userNome">ADMIN</strong></span>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </div>
+</div>
+
+  <!-- CONTEÚDO -->
+  <div class="home-content">
+
+    <h1>Consultas Presenciais</h1>
+    <p class="subtitle">Agende sua consulta presencial</p>
+
+    <div class="consulta-grid">
+
+      <!-- AGENDAR -->
+      <div class="consulta-card">
+        <h3>Agendar consulta</h3>
+
+        <label>Especialidade</label>
+        <select id="especialidade" onchange="atualizarMedicos()">
+          <option value="">Selecione uma especialidade</option>
+          <option>Clínico Geral</option>
+          <option>Cardiologia</option>
+          <option>Psicologia</option>
+          <option>Dermatologia</option>
+        </select>
+
+        <label>Médico</label>
+        <select id="medico">
+          <option value="">Selecione um médico</option>
+        </select>
+
+        <label>Data</label>
+        <input type="date" id="data" onchange="atualizarHorarios()">
+
+        <label class="label-horario">Horário</label>
+        <div class="horarios">
+          <button type="button" onclick="selecionarHora(this)">09:00</button>
+          <button type="button" onclick="selecionarHora(this)">10:00</button>
+          <button type="button" onclick="selecionarHora(this)">11:00</button>
+          <button type="button" onclick="selecionarHora(this)">14:00</button>
+          <button type="button" onclick="selecionarHora(this)">15:00</button>
+          <button type="button" onclick="selecionarHora(this)">16:00</button>
+        </div>
+
+        <input type="hidden" id="hora">
+
+        <button onclick="agendarConsulta()">Agendar</button>
+
+        <p id="msgConsulta"></p>
+      </div>
+
+      <!-- CONSULTAS -->
+      <div class="consulta-card">
+        <h3>Consultas agendadas</h3>
+
+        <div id="listaConsultas" class="lista-consultas">
+          <!-- JS injeta aqui -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

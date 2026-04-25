@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sala de Consulta</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/sala.css?v=2">
+  <script src="../app.js"></script>
+</head>
+
+<body class="home-dark">
+
+  <!-- NAVBAR -->
+  <div class="home-navbar">
+  <div class="home-logo">🏥 Sistema Hospitalar</div>
+
+  <div class="home-menu">
+    <span onclick="irHome()">Início</span>
+    <span onclick="irConsulta()">Consulta</span>
+    <span onclick="irTelemedicina()">Telemedicina</span>
+    <span onclick="irPaciente()">Paciente</span>
+  </div>
+
+  <div class="home-right">
+    <span class="home-user">Olá, <strong id="userNome">ADMIN</strong></span>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </div>
+</div>
+
+  <!-- CONTEÚDO -->
+  <div class="home-content">
+
+    <h1>Sala de Consulta</h1>
+    <p class="subtitle">Consulta online em andamento</p>
+
+    <div class="sala-container">
+
+      <!-- VIDEO (simulação) -->
+      <div class="video-box">
+        <p>🎥 Vídeo da consulta</p>
+      </div>
+
+      <!-- CONTROLES -->
+      <div class="controles">
+
+        <button onclick="toggleMic()">🎤 Microfone</button>
+        <button onclick="toggleCam()">📷 Câmera</button>
+        <button class="danger" onclick="sairConsulta()">❌ Sair</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

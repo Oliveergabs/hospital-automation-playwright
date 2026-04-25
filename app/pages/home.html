@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <script src="../app.js"></script>
+</head>
+
+<body class="app-area">
+
+<div class="home-dark">
+
+  <!-- NAVBAR -->
+  <div class="home-navbar">
+    <div class="home-logo">🏥 Sistema Hospitalar</div>
+
+    <div class="home-menu">
+        <span class="active" onclick="irHome()">Início</span>
+        <span onclick="irConsulta()">Consulta</span>
+        <span onclick="irTelemedicina()">Telemedicina</span>
+        <span onclick="irPaciente()">Paciente</span>
+    </div>
+
+    <div class="home-right">
+      <span class="home-user">Olá, <strong id="userNome">ADMIN</strong></span>
+      <button class="logout-btn" onclick="logout()">Sair</button>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO CENTRAL -->
+  <div class="home-content">
+
+    <h1>O que você deseja fazer?</h1>
+    <p class="subtitle">Selecione uma das opções abaixo</p>
+
+    <!-- CARDS CENTRALIZADOS -->
+    <div class="home-grid">
+
+        <div class="home-card" onclick="irConsulta()">
+            <div class="home-icon">📅</div>
+            <h3>Consulta presencial</h3>
+            <p>Agende atendimento presencial.</p>
+            <span>Agendar →</span>
+        </div>
+
+        <div class="home-card" onclick="irTelemedicina()">
+            <div class="home-icon">💻</div>
+            <h3>Telemedicina</h3>
+            <p>Consulta online com especialistas.</p>
+            <span>Agendar →</span>
+        </div>
+
+        <div class="home-card" onclick="irPaciente()">
+            <div class="home-icon">👤</div>
+            <h3>Área do paciente</h3>
+            <p>Visualize seus dados.</p>
+            <span>Acessar →</span>
+        </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  width: 340px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* TÍTULO */
+.card h1 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 25px;
+}
+
+/* INPUT PADRÃO */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* INPUT COM OLHO */
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  padding-right: 40px; /* espaço pro olho */
+}
+
+/* OLHO 👁️ */
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* BOTÕES */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #3a8ee6;
+}
+
+button.secondary {
+  background: #eee;
+  color: #333;
+}
+
+button.secondary:hover {
+  background: #ddd;
+}
+
+/* ERRO */
+.erro {
+  color: red;
+  margin-top: 12px;
+  font-size: 14px;
+}

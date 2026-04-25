@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* BOTÕES PADRÃO */
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* INPUT PADRÃO */
+input, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* OLHO SENHA */
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* =========================
+   NAVBAR GLOBAL
+========================= */
+
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #0f172a;
+}
+
+.home-logo {
+  font-weight: bold;
+  color: white;
+}
+
+.home-menu span {
+  margin: 0 10px;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: 0.3s;
+}
+
+.home-menu span:hover {
+  color: white;
+}
+
+.home-menu .active {
+  color: white;
+  font-weight: bold;
+}
+
+/* =========================
+   USER + LOGOUT
+========================= */
+.home-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.home-user {
+  background: #1f2937;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.home-user strong {
+  color: #3b82f6;
+}
+
+.logout-btn {
+  background: transparent;
+  border: 1px solid #374151;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #1f2937;
+}
+
+/* =========================
+   LAYOUT PADRÃO (HOME/PACIENTE)
+========================= */
+
+.home-content {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .home-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

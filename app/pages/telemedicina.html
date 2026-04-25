@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Telemedicina</title>
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/telemedicina.css?v=2">
+  <script src="../app.js?v=2"></script>
+</head>
+
+<body class="home-dark">
+
+  <!-- NAVBAR -->
+  <div class="home-navbar">
+  <div class="home-logo">🏥 Sistema Hospitalar</div>
+
+  <div class="home-menu">
+    <span onclick="irHome()">Início</span>
+    <span onclick="irConsulta()">Consulta</span>
+    <span class="active" onclick="irTelemedicina()">Telemedicina</span>
+    <span onclick="irPaciente()">Paciente</span>
+  </div>
+
+  <div class="home-right">
+    <span class="home-user">Olá, <strong id="userNome">ADMIN</strong></span>
+    <button class="logout-btn" onclick="logout()">Sair</button>
+  </div>
+</div>
+
+  <!-- CONTEÚDO -->
+  <div class="home-content">
+
+    <h1>Telemedicina</h1>
+    <p class="subtitle">Agende ou acesse sua consulta online</p>
+
+    <div class="tele-grid">
+
+      <!-- AGENDAR -->
+      <div class="tele-card">
+        <h3>Agendar consulta</h3>
+
+        <label>Especialidade</label>
+        <select id="especialidade" onchange="atualizarMedicos('medicoTele')">
+          <option value="">Selecione uma especialidade</option>
+          <option>Clínico Geral</option>
+          <option>Cardiologia</option>
+          <option>Psicologia</option>
+          <option>Dermatologia</option>
+        </select>
+
+        <!-- 🔥 NOVO CAMPO -->
+        <label>Médico</label>
+        <select id="medicoTele">
+          <option value="">Selecione um médico</option>
+        </select>
+
+        <label>Data</label>
+        <input type="date" id="data" onchange="atualizarHorarios()">
+
+        <label class="label-horario">Horário</label>
+
+        <div class="horarios">
+          <button type="button" onclick="selecionarHora(this)">09:00</button>
+          <button type="button" onclick="selecionarHora(this)">10:00</button>
+          <button type="button" onclick="selecionarHora(this)">11:00</button>
+          <button type="button" onclick="selecionarHora(this)">14:00</button>
+          <button type="button" onclick="selecionarHora(this)">15:00</button>
+          <button type="button" onclick="selecionarHora(this)">16:00</button>
+        </div>
+
+        <input type="hidden" id="hora">
+
+        <button onclick="agendarTelemedicina()">Agendar</button>
+
+        <p id="msgTele"></p>
+      </div>
+
+      <!-- SALA -->
+      <div class="tele-card">
+        <h3>Sala de consulta</h3>
+
+        <p>Entre na sala de telemedicina a qualquer momento</p>
+
+        <button onclick="entrarConsulta()">Entrar na consulta</button>
+      </div>
+
+      <!-- CONSULTAS AGENDADAS -->
+      <div class="tele-card">
+        <h3>Consultas agendadas</h3>
+
+        <div id="listaConsultas">
+          <!-- preenchido via JS -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    // 🔥 inicializa tudo
+    atualizarMedicos();
+    carregarConsultasTele();
+  </script>
+
+  <!-- MODAL CANCELAMENTO -->
+  <div id="modalCancel" class="modal">
+    <div class="modal-content">
+      <p>Tem certeza que deseja cancelar sua consulta?</p>
+
+      <div class="modal-actions">
+        <button onclick="confirmarCancelamento()">Sim</button>
+        <button onclick="fecharModal()">Não</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

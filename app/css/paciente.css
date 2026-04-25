@@ -1,0 +1,118 @@
+/* BASE IGUAL HOME */
+.home-dark {
+  background: #0b1220;
+  min-height: 100vh;
+  color: #e5e7eb;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTEÚDO CENTRALIZADO IGUAL HOME */
+.home-content {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* TÍTULO */
+.home-content h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* SUBTÍTULO */
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.paciente-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.paciente-card {
+  background: #111827;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.paciente-card:hover {
+  border: 1px solid #3b82f6;
+}
+
+/* TITULO CARD */
+.paciente-card h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* TEXTOS */
+.paciente-card p {
+  margin-bottom: 10px;
+}
+
+/* INPUT */
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #ffffff; /* 🔥 branco */
+  color: #000; /* texto escuro */
+  box-sizing: border-box; /* 🔥 impede estourar */
+}
+
+/* OLHO */
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* BOTÃO */
+.paciente-card button {
+  width: 60%;
+  padding: 10px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 20px auto; /
+}
+
+.paciente-card button:hover {
+  background: #2563eb;
+}
+
+/* MENSAGEM */
+#msgSenha {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .home-navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
