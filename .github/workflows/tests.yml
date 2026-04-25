@@ -29,20 +29,23 @@ jobs:
 
       - name: Subir aplicação
         run: |
-          cd app
-          python -m http.server 8006 &
+          cd app && python -m http.server 8006 &
 
       - name: Esperar aplicação subir
         run: |
-          sleep 5
+          for i in {1..10}; do
+            curl -s http://localhost:8006 && break
+            echo "Aguardando servidor..."
+            sleep 2
+          done
 
       - name: Rodar testes
         run: |
-          pytest -m smoke
+          pytest -m smoke --html=reports/report.html --self-contained-html
 
       - name: Upload relatório
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: relatorio-testes
-          path: report.html
+          path: reports/report.html
