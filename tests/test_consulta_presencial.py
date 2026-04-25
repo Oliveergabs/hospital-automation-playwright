@@ -13,7 +13,7 @@ def acessar_consulta(admin_logado):
     tela.acessar_consulta_presencial()
     return tela
 
-@given("que o paciente possui uma consulta agendada")
+@given("possui uma consulta agendada")
 def possuir_consulta(tela_consulta):
     tela_consulta.agendar_consulta_valida()
 

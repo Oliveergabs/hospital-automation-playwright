@@ -1,3 +1,4 @@
+from openpyxl.worksheet import page
 from pytest_bdd import scenarios, given, when, then, parsers
 from src.pages.consulta_telemedicina_page import Telemedicina
 
@@ -8,13 +9,12 @@ scenarios("../src/features/consulta_telemedicina.feature")
 @given("que o paciente está na tela de telemedicina", target_fixture="tela_telemedicina")
 def tela_telemedicina(admin_logado):
     page = admin_logado.page
-    page.evaluate("localStorage.clear()")  # 👈 AQUI
 
     tela = Telemedicina(page)
     tela.acessar_consulta_telemedicina()
     return tela
 
-@given("que o paciente possui uma consulta agendada")
+@given("possui uma consulta agendada")
 def possuir_consulta(tela_telemedicina):
     tela_telemedicina.agendar_consulta_valida()
 

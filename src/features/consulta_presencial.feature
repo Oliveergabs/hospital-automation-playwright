@@ -47,12 +47,14 @@ Funcionalidade: Consulta
 
   @smoke @consulta
   Cenário: Cancelar consulta agendada
-    Dado que o paciente possui uma consulta agendada
+    Dado que o paciente está na tela de consulta
+    E possui uma consulta agendada
     Quando clicar em "Cancelar"
     Então a consulta deve ser removida da lista
 
   @smoke @consulta
   Cenário: Não cancelar consulta ao fechar popup
-    Dado que o paciente possui uma consulta agendada
+    Dado que o paciente está na tela de consulta
+    E possui uma consulta agendada
     Quando clicar em "Cancelar" e não confirmar
     Então a consulta deve permanecer na lista

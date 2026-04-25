@@ -50,13 +50,15 @@ Funcionalidade: Telemedicina
 
   @smoke @telemedicina
   Cenário: Cancelar consulta agendada
-    Dado que o paciente possui uma consulta agendada
+    Dado que o paciente está na tela de telemedicina
+    E possui uma consulta agendada
     Quando clicar em "Cancelar"
     Então a consulta deve ser removida da lista
 
   @smoke @telemedicina
   Cenário: Não cancelar consulta ao fechar popup
-    Dado que o paciente possui uma consulta agendada
+    Dado que o paciente está na tela de telemedicina
+    E possui uma consulta agendada
     Quando clicar em "Cancelar" e não confirmar
     Então a consulta deve permanecer na lista
 

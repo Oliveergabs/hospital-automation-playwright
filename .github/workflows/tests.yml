@@ -39,6 +39,9 @@ jobs:
             sleep 2
           done
 
+      - name: Limpar reports
+        run: rm -rf reports
+
       - name: Rodar testes
         run: |
           pytest -m smoke --html=reports/report.html --self-contained-html
