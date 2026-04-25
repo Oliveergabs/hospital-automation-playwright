@@ -28,9 +28,15 @@ jobs:
           playwright install --with-deps
 
       - name: Subir aplicação
+        run: python server.py &
+
+      - name: Esperar aplicação subir
         run: |
-          python server.py &
-          sleep 5
+          for i in {1..10}; do
+            curl -s http://localhost:8006 && break
+            echo "Aguardando servidor..."
+            sleep 2
+          done
 
       - name: Rodar testes
         run: |
