@@ -1,4 +1,3 @@
-from openpyxl.worksheet import page
 from pytest_bdd import scenarios, given, when, then, parsers
 from src.pages.consulta_telemedicina_page import Telemedicina
 
