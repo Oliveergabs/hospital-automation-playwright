@@ -29,7 +29,7 @@ jobs:
 
       - name: Subir aplicação
         run: |
-          python -m http.server 8006 &
+          cd app && python -m http.server 8006 &
 
       - name: Esperar aplicação subir
         run: |
