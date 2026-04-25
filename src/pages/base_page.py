@@ -11,6 +11,6 @@ class BasePage:
         self.page.goto('')
 
     def acessar_cadastro(self):
-        self.page.goto('pages/cadastro.html')
+        self.page.goto('pages/Cadastro.html')
         self.page.wait_for_load_state("domcontentloaded")
 
